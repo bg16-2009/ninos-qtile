@@ -32,8 +32,21 @@ Do you want to install extra packages via a separate menu? [Y/n] ''', end='')
     print('You should reboot your compuer!')
 
 def modify():
-    print('Work in progress!')
+    print('''
+Welcome to ninOS!
 
+Here you can modify your current install!
+What do you want to do?
+[1] Add more software via a separate menu
+[2] Install configs
+
+Type the number with your choice: ''', end='')
+    choice=input()
+    if(choice=='1'):
+        menu()
+    elif(choice=='2'):
+        install_configs(False)
+        print('Configs installed succesfully!')
 
 def main():
     banner()
