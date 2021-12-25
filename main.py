@@ -43,7 +43,8 @@ What do you want to do?
 Type the number with your choice: ''', end='')
     choice=input()
     if(choice=='1'):
-        menu()
+        pkg_choices=menu()
+        install_from_list(pkg_choices, True)
     elif(choice=='2'):
         install_configs(False)
         print('Configs installed succesfully!')
