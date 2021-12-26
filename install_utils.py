@@ -15,7 +15,6 @@ def install_esentials(v):
 
 def install_configs(v):
     home=os.popen('echo $HOME').read()
-    
     if(v==True):
         print(f'Installing special configs in the {home} directory')
         print('(If something goes wrong you can reinstall them from the modify menu)')
