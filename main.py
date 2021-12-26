@@ -1,5 +1,5 @@
 from ui import banner, menu
-from install_utils import install_esentials, install_from_list
+from install_utils import install_esentials, install_from_list, install_configs
 import os, time
 
 def install():
@@ -12,7 +12,7 @@ Do you want to install extra packages via a separate menu? [Y/n] ''', end='')
     if(opt.lower()=='y'):
         os.system("clear")
         print("Opening menu....")
-        time.delay(1)
+        time.sleep(1)
         opt_pkg_choice=menu()
     os.system("clear")
     print('Installing ninOS.....')
