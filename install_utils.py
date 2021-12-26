@@ -14,11 +14,8 @@ def install_esentials(v):
     install_from_list(pkgs_esential, v)
 
 def install_configs(v):
-    username=os.popen('whoami').read().split('\n')[0]
-    if(username=='root'):
-        home='/root'
-    else:
-        home=f'/home/{username}'
+    home=os.popen('echo $HOME').read()
+    
     if(v==True):
         print(f'Installing special configs in the {home} directory')
         print('(If something goes wrong you can reinstall them from the modify menu)')
@@ -33,6 +30,6 @@ def install_configs(v):
     )
     shutil.copy(
         f'{os.getcwd()}/configs/config.py', 
-        f'/.config/qtile/'
+        f'{home}/.config/qtile/'
     )
     
